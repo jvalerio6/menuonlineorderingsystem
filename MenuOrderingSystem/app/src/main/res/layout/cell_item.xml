@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="1dp"
+    android:weightSum="1"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/i_image"
+        android:layout_height="74dp"
+        android:layout_width="101dp"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="243dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="124dp"
+        android:id="@+id/cell_text_container">
+
+        <TextView android:id="@+id/i_name"
+            android:layout_marginTop="0dp"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:text="Chicken sandwich"
+            android:textColor="@color/common_google_signin_btn_text_light_default"
+            android:layout_height="35dp" />
+
+        <TextView android:id="@+id/i_quantity"
+            android:layout_marginTop="0dp"
+            android:textSize="17sp"
+            android:layout_width="233dp"
+            android:text="Quantity: 2"
+            android:textColor="@color/common_google_signin_btn_text_light_default"
+            android:layout_height="27dp" />
+
+        <TextView android:id="@+id/i_size"
+            android:textSize="17sp"
+            android:layout_width="232dp"
+            android:text="Size: Small"
+            android:textColor="@color/common_google_signin_btn_text_light_default"
+            android:layout_height="27dp" />
+
+        <TextView android:id="@+id/i_total"
+            android:textColor="@color/common_google_signin_btn_text_light_default"
+            android:layout_width="234dp"
+            android:textSize="17sp"
+            android:textColorLink="@android:color/holo_blue_dark"
+            android:text="(2) x $2.5 = $5"
+            android:layout_height="27dp" />
+    </LinearLayout>
+
+</LinearLayout>

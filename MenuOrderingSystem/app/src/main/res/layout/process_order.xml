@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="147dp"
+        android:layout_height="93dp"
+        app:srcCompat="@drawable/success"
+        android:id="@+id/imageView"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:text="Your order has been processed successfully"
+        android:layout_width="match_parent"
+        android:id="@+id/textView3"
+        android:layout_weight="0.00"
+        android:layout_height="50dp"
+        android:textStyle="normal|bold"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="57dp"
+            app:srcCompat="@drawable/clock"
+            android:id="@+id/imageView2" />
+
+        <TextView
+            android:text="Waiting time: "
+            android:layout_height="36dp"
+            android:id="@+id/waiting_time"
+            android:textSize="18sp"
+            android:textStyle="normal|italic"
+            android:layout_width="197dp"
+            android:elevation="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="0.48" />
+    </LinearLayout>
+
+</LinearLayout>

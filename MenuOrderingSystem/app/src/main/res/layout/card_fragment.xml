@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="193dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="85dp"
+            android:layout_height="57dp"
+            app:srcCompat="@drawable/payment_method_master_card"
+            android:id="@+id/imageView5" />
+
+        <ImageView
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/payment_method_card_visa"
+            android:id="@+id/imageView4"
+            android:layout_weight="0.02"
+            android:layout_marginLeft="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="0.00">
+
+        <EditText
+            android:layout_width="251dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/cc_number"
+            android:inputType="number"
+            android:hint="Enter credit card number" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/ccv"
+            android:layout_weight="1"
+            android:hint="CCV" />
+
+    </LinearLayout>
+
+    <Button
+        android:text="Submit Payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cc_submit"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_weight="0.04"
+        android:textStyle="normal|bold"
+        android:textSize="16sp"
+        android:textColor="@android:color/background_light"
+        android:background="@android:color/holo_orange_light"
+        android:onClick="onSubmitPayment"/>
+
+</LinearLayout>

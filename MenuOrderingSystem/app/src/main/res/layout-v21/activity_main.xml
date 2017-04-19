@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.jvalerio.menuorderingsystem.MainActivity"
+    android:background="@android:color/background_light">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:text="Use this app to order or give us a call!"
+        android:id="@+id/textView"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_width="280dp"
+        android:layout_alignBottom="@+id/call_button"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/linear_layout_menu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/call_button">
+
+        <Spinner
+            android:id="@+id/items_spinner"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="122dp"
+            android:entries="@array/menu_items"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:id="@+id/item_details_section"
+        android:weightSum="1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="240dp"
+        android:layout_below="@+id/linear_layout_menu"
+        android:layout_marginTop="0dp"
+        android:layout_above="@+id/buttons">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/heading"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="0.96"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_height="103dp"
+                android:id="@+id/item_image"
+                app:srcCompat="@android:drawable/menuitem_background"
+                android:layout_width="158dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView android:id="@+id/item_heading"
+                android:layout_marginTop="0dp"
+                android:textSize="24sp"
+                android:textColor="?android:attr/colorControlNormal"
+                android:layout_height="32dp"
+                android:layout_width="match_parent"
+                android:layout_weight="0"
+                android:textAlignment="center" />
+
+            <TextView android:id="@+id/item_details"
+                android:layout_marginTop="0dp"
+                android:textSize="18sp"
+                android:textColor="?android:attr/colorControlNormal"
+                android:layout_height="33dp"
+                android:layout_width="match_parent"
+                android:layout_weight="0.65"
+                android:textAlignment="center"
+                android:gravity="center_vertical" />
+
+            <TextView android:id="@+id/item_url"
+                android:layout_marginTop="0dp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="35dp"
+                android:lineSpacingExtra="0sp"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:textColorLink="@android:color/holo_blue_dark" />
+
+        </LinearLayout>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:id="@+id/ratingBar"
+            android:rating="3"
+            android:numStars="5"
+            android:background="@android:color/background_light"
+            android:stepSize="1"
+            android:layout_gravity="center_horizontal"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:progressTint="@color/gold"
+            style="@android:style/Widget.Holo.RatingBar" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:baselineAligned="false"
+            android:layout_marginTop="15dp"
+            android:weightSum="1">
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/size_spinner"
+                android:layout_marginTop="0dp"
+                android:entries="@array/item_sizes"
+                android:layout_weight="0.68" />
+
+            <EditText
+                android:layout_width="129dp"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:ems="0"
+                android:id="@+id/quantity_text"
+                android:hint="Quantity"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:baselineAligned="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:text="Add to Cart"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_to_cart"
+            android:background="@color/common_google_signin_btn_text_light_disabled"
+            android:textColor="@color/common_google_signin_btn_text_light_default"
+            android:textStyle="normal|bold"
+            android:onClick="addToCart"
+            android:layout_above="@+id/checkout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="122dp" />
+
+        <Button
+            android:text="Continue to Checkout"
+            android:id="@+id/checkout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_orange_light"
+            android:textColor="@android:color/background_light"
+            android:textStyle="normal|bold"
+            android:onClick="onCheckout"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/call_button"
+        android:background="@drawable/call"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

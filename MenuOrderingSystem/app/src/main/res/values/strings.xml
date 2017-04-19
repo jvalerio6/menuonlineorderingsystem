@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Chick-fil-a Online Menu</string>
+    <string name="order_details_label">Review Order Details</string>
+    <string name="processing_label">Processing Order...</string>
+    <string name="payment_select_label">Select Payment method</string>
+    <string name="order_ready_label">Success: Order is ready</string>
+
+    <string-array name="menu_items">
+        <item >---------------------- Entrees ----------------------</item>
+        <item>Bagel</item>
+        <item>Biscuit</item>
+        <item>Chicken Sandwich</item>
+        <item>Deluxe Sandwich</item>
+        <item>Chicken Wrap</item>
+        <item>Noodle Soup</item>
+        <item>Tortilla Soup</item>
+
+        <item >---------------------- Drinks ----------------------</item>
+        <item>Coke</item>
+        <item>Hot Coffee</item>
+        <item>Iced Coffee</item>
+        <item>Lemonade</item>
+
+        <item >---------------------- Dessert ----------------------</item>
+        <item>Chocolate Cookie</item>
+        <item>Fruit Cup</item>
+        <item>Milkshake</item>
+        <item>Yogurt</item>
+
+        <item >---------------------- Salads ----------------------</item>
+        <item>Cobb Salad</item>
+        <item>Grilled Market Salad</item>
+    </string-array>
+
+    <string-array name="item_sizes">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+
+</resources>

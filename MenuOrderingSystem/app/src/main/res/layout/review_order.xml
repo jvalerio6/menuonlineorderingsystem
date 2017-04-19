@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/cart_details"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:scrollbars = "vertical"
+        android:layout_height="320dp" />
+
+    <TextView
+        android:layout_width="214dp"
+        android:id="@+id/subtotal_view"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textStyle="normal|italic"
+        android:textSize="18sp"
+        android:layout_height="25dp"
+        android:layout_gravity="end"
+        android:layout_weight="0.22"
+        android:textAlignment="textEnd" />
+
+    <TextView
+        android:layout_width="214dp"
+        android:id="@+id/tax_view"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textStyle="normal|italic"
+        android:textSize="18sp"
+        android:layout_height="25dp"
+        android:layout_gravity="end"
+        android:layout_weight="0.22"
+        android:textAlignment="textEnd" />
+
+    <TextView
+        android:layout_width="213dp"
+        android:id="@+id/total_view"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textStyle="normal|bold"
+        android:textSize="22sp"
+        android:layout_height="30dp"
+        android:layout_gravity="end"
+        android:textAlignment="textEnd" />
+
+    <Button
+        android:text="Submit Order"
+        android:layout_width="match_parent"
+        android:background="@android:color/holo_blue_dark"
+        style="@style/Widget.AppCompat.Button"
+        android:elevation="0dp"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_light"
+        android:textStyle="normal|bold"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="50dp"
+        android:onClick="onSubmitOrder"/>
+</LinearLayout>

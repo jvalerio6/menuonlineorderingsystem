@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="@color/custom_gray">
+
+    <ImageView
+        android:layout_width="199dp"
+        android:layout_height="101dp"
+        app:srcCompat="@drawable/payment_method_paypal"
+        android:id="@+id/imageView3"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="205dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_weight="0.29">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/paypal_email"
+            android:hint="Enter email" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/paypal_password"
+            android:hint="Enter password"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:text="Submit Payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/paypal_submit"
+            android:layout_marginTop="60dp"
+            android:textStyle="normal|bold"
+            android:background="@android:color/holo_orange_light"
+            android:textSize="16sp"
+            android:textColor="@android:color/background_light" />
+    </LinearLayout>
+
+</LinearLayout>
